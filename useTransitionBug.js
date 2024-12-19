@@ -1,0 +1,1 @@
+This bug occurs in React 19 when using the new `useTransition` hook with a very expensive transition function.  The transition function might block the main thread for too long causing the UI to freeze, or even worse, leading to a `React.StrictMode` warning about a long-running task during render.  This is because the transition function is executed synchronously by default.
